@@ -1,0 +1,1 @@
+ESlint muokkasi kahta asiaa: 1) vaihtoi exmple funktion siten että elsen jälkeen ei tule returnia. Eli oli turha else-statement. 2) vaihtoi statementin var x = 4; const x = 4; eli suositaan constia kun mahdollista ja vältetään var:in käyttöä.
