@@ -4,9 +4,11 @@ const app = express();
 
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(express.static('public'));
+
+// app.get('/', (req, res) => {
+// res.send('Hello World!');
+// });
 
 app.get('/randomize', (req, res) => {
   const number1 = Math.floor(Math.random() * 3);
