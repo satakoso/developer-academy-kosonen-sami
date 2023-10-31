@@ -41,6 +41,10 @@ app.get('/randomize', (req, res) => {
   }
 });
 
+app.get('/locations', (req, res) => {
+  res.sendFile(__dirname + '/locations.html');
+});
+
 app.listen(port, () => {
   console.log('Example applistening on port ${port}');
 });
