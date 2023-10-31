@@ -15,10 +15,31 @@ get http://localhost:3000/locations/1
 get http://localhost:3000/locations/2
 
 ###
-delete http://localhost:3000/locations/1
+delete http://localhost:3000/locations/4
 
 ###
 post http://localhost:3000/locations/
 content-type: application/json
 
-{ "latitude": 50, "longitude": 40 }
+{ "latitude": 76, "longitude": 34 }
+
+###
+
+
+post http://localhost:3000/locations/
+content-type: application/json
+
+{ "latitude": 76, "longitude": asd }
+
+
+###
+post http://localhost:3000/locations/
+content-type: application/json
+
+{ "latitude": 76, "le": 34 }
+
+###
+post http://localhost:3000/locations/
+content-type: application/json
+
+{ "latitude": 76}

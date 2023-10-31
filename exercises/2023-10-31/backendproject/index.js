@@ -59,14 +59,26 @@ app.get('/locations/:muuttuja([0-9]+)', (req, res) => {
 });
 app.post('/locations', (req, res) => {
   const location = req.body;
+
+  if (
+    typeof location.latitude !== 'number' ||
+    location.latitude < -90 ||
+    location.latitude > 90 ||
+    typeof location.longitude !== 'number' ||
+    location.longitude < -180 ||
+    location.longitude > 180
+  ) {
+    res.status(400).end();
+    return;
+  }
   location.id = ++id;
-  // console.log(location);
   db.push(location);
-  // res.send('Adding new location');
+  res.status(201).json(location).end();
 });
 app.delete('/locations/:muuttuja([0-9]+)', (req, res) => {
   const id = parseInt(req.params.muuttuja);
   db = db.filter((item) => item.id !== id);
+  res.status(204).end();
   // res.send('Delete location with id:' + id);
 });
 
