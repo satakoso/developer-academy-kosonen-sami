@@ -1,4 +1,4 @@
-# developer-academy-kosonen-sami
+# developer-academy
 
 This repo is for submitting exercises for Developer academy 
 
